@@ -1,0 +1,218 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: dbwp-performance-tester\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2014-12-12 13:56+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Anthony Fourneau <anthony@dareboost.com>\n"
+"Language-Team: DareBoost <contact@dareboost.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: performance-tester.php:95 performance-tester.php:334
+msgid "Analyze my homepage"
+msgstr "Analyser ma page d'acceuil"
+
+#: performance-tester.php:157
+msgid "An unkown error occured! Please try to relaunch."
+msgstr ""
+"Une erreur est survenue. Veuillez réessayer de lancer l'analyse s'il vous "
+"plait."
+
+#: performance-tester.php:162
+msgid "Your analysis has been launched."
+msgstr "Votre analyse est lancée."
+
+#: performance-tester.php:331
+msgid ""
+"Analyze your webpage and get your web performance and quality report. "
+"Quickly access to the major metrics of the page and get tips to improve and "
+"speed up your website."
+msgstr ""
+"Analysez votre page d'acceuil et obtenez votre rapport de performance et "
+"qualité web. Accédez rapidement aux indicateurs majeurs de votre page et "
+"obtenez les trois améliorations prioritaires pour accélerer votre site web."
+
+#: performance-tester.php:376
+msgid ""
+"Access to your full web performance and quality report which gather hundreds "
+"of metrics and tips to improve and speed up your website"
+msgstr ""
+"Accédez à votre rapport de performance et qualité web qui rassemblent des "
+"centaines d'indicateurs et de conseils pour améliorer et accélérer votre "
+"site."
+
+#: performance-tester.php:379
+msgid "Access to the full report"
+msgstr "Accéder au rapport complet"
+
+#: performance-tester.php:408
+msgid " MB"
+msgstr "Mo"
+
+#: performance-tester.php:410
+msgid " kB"
+msgstr "ko"
+
+#: performance-tester.php:412
+msgid " B"
+msgstr "o"
+
+#: performance-tester.php:417
+msgid "Overall metric"
+msgstr "Indicateur global"
+
+#: performance-tester.php:424
+msgid " sec"
+msgstr "sec"
+
+#: performance-tester.php:447
+msgid "Your 3 improvement priorities"
+msgstr "Vos 3 améliorations prioritaires"
+
+#: performance-tester.php:453
+msgid "Priority"
+msgstr "Priorité"
+
+#: performance-tester.php:453
+msgid ": "
+msgstr "  : "
+
+#: performance-tester.php:484
+msgid "Performance timings"
+msgstr "Performance timings"
+
+#: performance-tester.php:485
+msgid ""
+"Performance timings are a set of data which provides information on the "
+"loadtime of a web page. It allows to identify the different parts of the "
+"loadtime and how long it takes for each one to be completed."
+msgstr ""
+"Les \"performance timings\" sont un ensemble de données qui fournissent des "
+"informations sur le temps de chargement d'une page web. Ils permettent "
+"d'identifier les différentes étapes du chargement d'une page et le temps "
+"nécessaire à chacune d'elles pour être complétée."
+
+#: performance-tester.php:487
+msgid "Server response"
+msgstr "Premier bit"
+
+#: performance-tester.php:487 performance-tester.php:488
+#: performance-tester.php:489
+msgid " ms"
+msgstr "ms"
+
+#: performance-tester.php:488
+msgid "Page interactive"
+msgstr "Page interactive"
+
+#: performance-tester.php:489
+msgid "Page is fully loaded"
+msgstr "La page est complétement chargée"
+
+#: performance-tester.php:498
+msgid ""
+"* Server response: Time to first byte. Delay between the request emission "
+"and the reception of the first byte of the response."
+msgstr ""
+"* Premier bit : Temps écoulé entre l'envoi de la requête et la réception du "
+"premier octet par le client"
+
+#: performance-tester.php:499
+msgid "* Page interactive: It's when the user can interact with the web page."
+msgstr ""
+"* Page interactive : Instant à partir duquel l'utilisateur peut interagir "
+"avec la page web."
+
+#: performance-tester.php:500
+msgid ""
+"* Page is fully loaded: It's the time when the web page is fully loaded (the "
+"loading indicator of your browser disappear.)"
+msgstr ""
+"* La page est totalement chargée :  il s'agit de l'instant où tous les "
+"éléments de la page sont chargés ( l'indicateur de chargement de votre "
+"navigateur internet disparaît )"
+
+#: performance-tester.php:515
+msgid "Who develops this plugin?"
+msgstr "Qui développe ce plugin ?"
+
+#: performance-tester.php:518
+msgid "This plugin is developped by "
+msgstr "Ce plugin est développé par "
+
+#: performance-tester.php:518
+msgid "a french start-up that aims to speed-up the web."
+msgstr "une start-up française qui a pour objectif d'accelérer le web."
+
+#: performance-tester.php:518
+msgid ""
+"We provide an online tool to analyze your web pages and to detect quality "
+"and loading times issues. With this plugin we aim to help you to easily "
+"improve your web site."
+msgstr ""
+"Nous fournissons un outil en ligne pour analyser vos pages web et détecter "
+"les problèmes de qualité et de temps de chargement. Avec ce plugin nous "
+"souhaitons vous aider à améliorer facilement votre blog."
+
+#: performance-tester.php:520
+msgid "What is coming next?"
+msgstr "Quelle est la suite ?"
+
+#: performance-tester.php:522
+msgid ""
+"For the moment this plugin allows you to analyze your home page only. "
+"However we plan to improve this plugin and to offer monitoring feature."
+msgstr ""
+"Actuellement, ce plugin vous permet d'analyser votre page d'accueil "
+"uniquement. Cependant, nous prévoyons d'y intégrer nos fonctionnalités de "
+"monitoring."
+
+#: performance-tester.php:524
+msgid "If you are interested in, don't hesitate to "
+msgstr "Si vous êtes intéressé, n'hésitez pas à "
+
+#: performance-tester.php:524
+msgid "contact us."
+msgstr "nous contacter."
+
+#: performance-tester.php:526
+msgid "Like this plugin? "
+msgstr "Vous aimez ce plugin ?"
+
+#: performance-tester.php:528
+msgid ""
+" We would love to hear your feedback. Please be blunt, positive and negative "
+"comments are welcome."
+msgstr ""
+"Nous adorerions avoir votre feedback ! Les commentaires qu'ils soient "
+"positifs ou négatifs sont les bienvenus."
+
+#: performance-tester.php:529
+msgid "Contact us"
+msgstr "Contactez nous"
+
+#: performance-tester.php:531
+msgid "Help us to improve it, find source on "
+msgstr "Aidez nous à améliorer ce plugin, vous pouvez trouver les sources sur "
+
+#: performance-tester.php:533
+msgid "You can give it a good rating on WordPress.org."
+msgstr "Vous pouvez lui donner une bonne note sur WordPress.org."
+
+#~ msgid "Your three priorities for improvements"
+#~ msgstr "Vos trois améliorations prioritaires"

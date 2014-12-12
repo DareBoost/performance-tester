@@ -1,0 +1,164 @@
+/*****************************
+ *          Common           *
+ *****************************/
+hr.dbwp_clear{
+	visibility: hidden;
+	clear: both;
+	border: 0;
+	height: 0;
+}
+
+.dbwp_bold{
+	font-weight: bold;
+}
+
+.dbwp_center{
+	text-align: center;
+}
+
+#dbwp_global{
+	margin:20px 20px 20px 0;
+	padding: 20px 50px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.dbwp_error{
+	color: #eb5d5c;
+}
+
+/*****************************
+ *            FAQ            *
+ *****************************/
+
+#dbwp_logo{
+	float: right;
+	margin: 0 15px;
+}
+
+#dbwp_intro h2{
+	margin-top: 40px;
+}
+
+/*****************************
+ *      Loading & Result     *
+ *****************************/
+
+#dbwp_loadingAndResult{
+	margin-top:30px;
+}
+
+#dbwp_loading{
+	display:none;
+	vertical-align: sub;
+}
+
+#dbwp_result{
+	display: inline-block;
+	padding-left: 15px;
+}
+
+#dbwp_reportButton{
+	font-weight: bold;
+	height: 40px;
+	padding-top: 5px;
+}
+
+#dbwp_result p{
+	margin-top: 0;
+	font-size: 14px;	
+}
+
+.dbwp_containerPart{
+	width: 670px;
+	margin-bottom: 55px;
+}
+
+/*****************************
+ *        Gauge part         *
+ *****************************/
+
+#dbwp_result div.dbwp_textContainer, #dbwp_result div.dbwp_gaugeContainer{
+	width: 137px;
+	height: 137px;
+	display:inline-block;
+	margin-right: 66px;
+}
+
+#dbwp_result div.dbwp_gaugeContainer{
+	position: relative;
+}
+
+#dbwp_result div.dbwp_gaugeContainer.dbwp_first{
+	margin-left: 33px;
+}
+
+#dbwp_result div.dbwp_textContainer{
+	position: absolute;
+	text-align: center;
+}
+
+#dbwp_result div.dbwp_gaugeContainer img{
+	position: absolute;
+}
+
+#dbwp_result span.dbwp_gaugeText{
+	font-size: 18px;
+	position: absolute;
+	z-index: 1000;
+	text-align: center;
+	width: 137px;
+	top: 79px;
+}
+
+/* Not use for the moment 
+#dbwp_result div.dbwp_textContainer p{
+	display: inline-block;
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+#dbwp_result div.dbwp_textContainer  span.dbwp_caption{
+	font-weight: bold;
+} */
+
+/*****************************
+ *    Performance timings    *
+ *****************************/
+
+.dbwp_captionPT{
+	margin-right: 15px;
+}
+
+.dbwp_captionColorPT{
+    display: inline-block;
+    height: 5px;
+    width: 14px;
+	margin: 0 9px 3px 0;
+}
+.dbwp_performanceTimingsGauge{
+    background-color:#ecf0f1;
+	width: 96%;
+    height : 20px;
+    display:inline-block;
+    position:relative;
+}
+.dbwp_performanceTimingsParts{
+	height : 100%; 
+	float: left;
+}
+.dbwp_ttfb{
+	background-color:#c0392b;
+}
+.dbwp_domInteractive{
+	background-color:#2980b9;
+}
+.dbwp_fullyLoad{
+	background-color:#27ae60;
+}
+
+p#dbwp_perfTimingsExplain{
+	font-size: 12px;
+	margin-top: 15px;
+}
