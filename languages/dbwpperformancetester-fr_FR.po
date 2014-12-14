@@ -25,7 +25,7 @@ msgstr ""
 
 #: performance-tester.php:95 performance-tester.php:334
 msgid "Analyze my homepage"
-msgstr "Analyser ma page d'acceuil"
+msgstr "Analyser ma page d'accueil"
 
 #: performance-tester.php:157
 msgid "An unkown error occured! Please try to relaunch."
