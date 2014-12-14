@@ -371,29 +371,29 @@ class Performance_Tester{
 	
 		// link to access the report
 		$formatedMessage = '<div>';
-				$formatedMessage .= '	<div class="dbwp_containerPart">';
-						$formatedMessage .= '		<p>';
-						$formatedMessage .= 			__('Access to your full web performance and quality report which gather hundreds of metrics and tips to improve and speed up your website',self::DBWP_TEXT_DOMAIN) ;
-						$formatedMessage .= '		</p>';
-						$formatedMessage .= '		<p class="dbwp_center">';
-						$formatedMessage .= '			<br/><a target="_blank" id="dbwp_reportButton" class="button button-primary" href="' . $json_response['report']['publicReportUrl'] . '">' . __('Access to the full report',self::DBWP_TEXT_DOMAIN) . '</a>';
-						$formatedMessage .= '		</p>';
-						$formatedMessage .= '	</div>';
-	
-						$formatedMessage .= $this->dbwp_get_gauge($json_response);
-	
-						// performance timings
-						if($performanceTimingsMessage != ""){
-							$formatedMessage .= $performanceTimingsMessage;
-						}
-	
-						// priority tips
-						$formatedMessage .= $this->dbwp_get_priority_tips($json_response['report']['tips']);
-						$formatedMessage .= '</div>';
-	
-						$result['message'] =  $formatedMessage ;
-						$result['isEnded'] = true;
-						return $result;
+		$formatedMessage .= '	<div class="dbwp_containerPart">';
+		$formatedMessage .= '		<p>';
+		$formatedMessage .= 			__('Access to your full web performance and quality report which gather hundreds of metrics and tips to improve and speed up your website',self::DBWP_TEXT_DOMAIN) ;
+		$formatedMessage .= '		</p>';
+		$formatedMessage .= '		<p class="dbwp_center">';
+		$formatedMessage .= '			<br/><a target="_blank" id="dbwp_reportButton" class="button button-primary" href="' . $json_response['report']['publicReportUrl'] . '">' . __('Access to the full report',self::DBWP_TEXT_DOMAIN) . '</a>';
+		$formatedMessage .= '		</p>';
+		$formatedMessage .= '	</div>';
+
+		$formatedMessage .= $this->dbwp_get_gauge($json_response);
+
+		// performance timings
+		if($performanceTimingsMessage != ""){
+			$formatedMessage .= $performanceTimingsMessage;
+		}
+
+		// priority tips
+		$formatedMessage .= $this->dbwp_get_priority_tips($json_response['report']['tips']);
+		$formatedMessage .= '</div>';
+
+		$result['message'] =  $formatedMessage ;
+		$result['isEnded'] = true;
+		return $result;
 	}
 	
 	/**
@@ -470,19 +470,23 @@ class Performance_Tester{
 		$performanceTimingsMessage = "";
 		if(isset($json_response['report']['performanceTimings'])){
 			// get timings
+			$loadTime = $json_response['report']['summary']['loadTime'];
 			$navigationStartTimestamp = $json_response['report']['performanceTimings']['navigationStart'];
 			$firstByteTimestamp = $json_response['report']['performanceTimings']['firstByte'];
 			$domInteractifTimestamp = $json_response['report']['performanceTimings']['domInteractive'];
-			$pageFullyLoadTimestamp = $json_response['report']['performanceTimings']['pageFullyLoad'];
 	
 			// compute size of the element and the value to display
-			$ttfbSize = ((( $firstByteTimestamp - $navigationStartTimestamp) * 100 ) / ($pageFullyLoadTimestamp - $navigationStartTimestamp)).'%';
+			$ttfbSize = ((( $firstByteTimestamp - $navigationStartTimestamp) * 100 ) / $loadTime).'%';
 			$ttfb = ($firstByteTimestamp - $navigationStartTimestamp);
-			$domInteractifSize = ((($domInteractifTimestamp - $firstByteTimestamp) * 100 ) / ($pageFullyLoadTimestamp - $navigationStartTimestamp)).'%';
+			$domInteractifSize = ((($domInteractifTimestamp - $firstByteTimestamp) * 100 ) / $loadTime).'%';
 			$domInteractif = ($domInteractifTimestamp - $navigationStartTimestamp);
-			$fullyLoadedSize = ((($pageFullyLoadTimestamp - $domInteractifTimestamp) * 100 ) / ($pageFullyLoadTimestamp - $navigationStartTimestamp)).'%';
-			$fullyLoaded = ($pageFullyLoadTimestamp - $navigationStartTimestamp);
+			$fullyLoadedSize = (100-$ttfbSize)-$domInteractifSize;
+			$fullyLoaded = $loadTime;
 	
+			$ttfbSize=$ttfbSize.'%';
+			$domInteractifSize=$domInteractifSize.'%';
+			$fullyLoadedSize=$fullyLoadedSize.'%';
+			
 			// compute HTMl
 			$performanceTimingsMessage .= '<div class="dbwp_containerPart">';
 			$performanceTimingsMessage .= '	<h2>' . __('Performance timings',self::DBWP_TEXT_DOMAIN) . '</h2>';
