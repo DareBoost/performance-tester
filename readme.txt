@@ -39,5 +39,8 @@ For the moment this plugin allows you to analyze your home page only. However we
 1. Example of a report you will get from your backoffice
 
 == Changelog ==
+= 0.1.1 =
+ - Fix spelling
+ - Improve performance timings consistency 
 = 0.1 =
 First version
