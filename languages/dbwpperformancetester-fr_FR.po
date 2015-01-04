@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dbwp-performance-tester\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2014-12-12 13:56+0100\n"
+"POT-Creation-Date: 2015-01-02 16:42+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anthony Fourneau <anthony@dareboost.com>\n"
 "Language-Team: DareBoost <contact@dareboost.com>\n"
@@ -23,21 +23,21 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: performance-tester.php:95 performance-tester.php:334
+#: performance-tester.php:95 performance-tester.php:337
 msgid "Analyze my homepage"
 msgstr "Analyser ma page d'accueil"
 
-#: performance-tester.php:157
+#: performance-tester.php:160
 msgid "An unkown error occured! Please try to relaunch."
 msgstr ""
 "Une erreur est survenue. Veuillez réessayer de lancer l'analyse s'il vous "
 "plait."
 
-#: performance-tester.php:162
+#: performance-tester.php:165
 msgid "Your analysis has been launched."
 msgstr "Votre analyse est lancée."
 
-#: performance-tester.php:331
+#: performance-tester.php:334
 msgid ""
 "Analyze your webpage and get your web performance and quality report. "
 "Quickly access to the major metrics of the page and get tips to improve and "
@@ -47,7 +47,7 @@ msgstr ""
 "qualité web. Accédez rapidement aux indicateurs majeurs de votre page et "
 "obtenez les trois améliorations prioritaires pour accélerer votre site web."
 
-#: performance-tester.php:376
+#: performance-tester.php:379
 msgid ""
 "Access to your full web performance and quality report which gather hundreds "
 "of metrics and tips to improve and speed up your website"
@@ -56,47 +56,47 @@ msgstr ""
 "centaines d'indicateurs et de conseils pour améliorer et accélérer votre "
 "site."
 
-#: performance-tester.php:379
+#: performance-tester.php:387
 msgid "Access to the full report"
 msgstr "Accéder au rapport complet"
 
-#: performance-tester.php:408
+#: performance-tester.php:415
 msgid " MB"
 msgstr "Mo"
 
-#: performance-tester.php:410
+#: performance-tester.php:417
 msgid " kB"
 msgstr "ko"
 
-#: performance-tester.php:412
+#: performance-tester.php:419
 msgid " B"
 msgstr "o"
 
-#: performance-tester.php:417
-msgid "Overall metric"
-msgstr "Indicateur global"
-
 #: performance-tester.php:424
+msgid "Overall Metrics"
+msgstr "Indicateurs globaux"
+
+#: performance-tester.php:431
 msgid " sec"
 msgstr "sec"
 
-#: performance-tester.php:447
+#: performance-tester.php:458
 msgid "Your 3 improvement priorities"
 msgstr "Vos 3 améliorations prioritaires"
 
-#: performance-tester.php:453
+#: performance-tester.php:464
 msgid "Priority"
 msgstr "Priorité"
 
-#: performance-tester.php:453
+#: performance-tester.php:464
 msgid ": "
 msgstr "  : "
 
-#: performance-tester.php:484
+#: performance-tester.php:499
 msgid "Performance timings"
 msgstr "Performance timings"
 
-#: performance-tester.php:485
+#: performance-tester.php:500
 msgid ""
 "Performance timings are a set of data which provides information on the "
 "loadtime of a web page. It allows to identify the different parts of the "
@@ -107,24 +107,24 @@ msgstr ""
 "d'identifier les différentes étapes du chargement d'une page et le temps "
 "nécessaire à chacune d'elles pour être complétée."
 
-#: performance-tester.php:487
+#: performance-tester.php:502
 msgid "Server response"
 msgstr "Premier bit"
 
-#: performance-tester.php:487 performance-tester.php:488
-#: performance-tester.php:489
+#: performance-tester.php:502 performance-tester.php:503
+#: performance-tester.php:504
 msgid " ms"
 msgstr "ms"
 
-#: performance-tester.php:488
+#: performance-tester.php:503
 msgid "Page interactive"
 msgstr "Page interactive"
 
-#: performance-tester.php:489
+#: performance-tester.php:504
 msgid "Page is fully loaded"
 msgstr "La page est complétement chargée"
 
-#: performance-tester.php:498
+#: performance-tester.php:513
 msgid ""
 "* Server response: Time to first byte. Delay between the request emission "
 "and the reception of the first byte of the response."
@@ -132,13 +132,13 @@ msgstr ""
 "* Premier bit : Temps écoulé entre l'envoi de la requête et la réception du "
 "premier octet par le client"
 
-#: performance-tester.php:499
+#: performance-tester.php:514
 msgid "* Page interactive: It's when the user can interact with the web page."
 msgstr ""
 "* Page interactive : Instant à partir duquel l'utilisateur peut interagir "
 "avec la page web."
 
-#: performance-tester.php:500
+#: performance-tester.php:515
 msgid ""
 "* Page is fully loaded: It's the time when the web page is fully loaded (the "
 "loading indicator of your browser disappear.)"
@@ -147,19 +147,19 @@ msgstr ""
 "éléments de la page sont chargés ( l'indicateur de chargement de votre "
 "navigateur internet disparaît )"
 
-#: performance-tester.php:515
+#: performance-tester.php:530
 msgid "Who develops this plugin?"
 msgstr "Qui développe ce plugin ?"
 
-#: performance-tester.php:518
+#: performance-tester.php:533
 msgid "This plugin is developped by "
 msgstr "Ce plugin est développé par "
 
-#: performance-tester.php:518
+#: performance-tester.php:533
 msgid "a french start-up that aims to speed-up the web."
 msgstr "une start-up française qui a pour objectif d'accelérer le web."
 
-#: performance-tester.php:518
+#: performance-tester.php:533
 msgid ""
 "We provide an online tool to analyze your web pages and to detect quality "
 "and loading times issues. With this plugin we aim to help you to easily "
@@ -169,11 +169,11 @@ msgstr ""
 "les problèmes de qualité et de temps de chargement. Avec ce plugin nous "
 "souhaitons vous aider à améliorer facilement votre blog."
 
-#: performance-tester.php:520
+#: performance-tester.php:535
 msgid "What is coming next?"
 msgstr "Quelle est la suite ?"
 
-#: performance-tester.php:522
+#: performance-tester.php:537
 msgid ""
 "For the moment this plugin allows you to analyze your home page only. "
 "However we plan to improve this plugin and to offer monitoring feature."
@@ -182,19 +182,19 @@ msgstr ""
 "uniquement. Cependant, nous prévoyons d'y intégrer nos fonctionnalités de "
 "monitoring."
 
-#: performance-tester.php:524
+#: performance-tester.php:539
 msgid "If you are interested in, don't hesitate to "
 msgstr "Si vous êtes intéressé, n'hésitez pas à "
 
-#: performance-tester.php:524
+#: performance-tester.php:539
 msgid "contact us."
 msgstr "nous contacter."
 
-#: performance-tester.php:526
+#: performance-tester.php:541
 msgid "Like this plugin? "
 msgstr "Vous aimez ce plugin ?"
 
-#: performance-tester.php:528
+#: performance-tester.php:543
 msgid ""
 " We would love to hear your feedback. Please be blunt, positive and negative "
 "comments are welcome."
@@ -202,15 +202,15 @@ msgstr ""
 "Nous adorerions avoir votre feedback ! Les commentaires qu'ils soient "
 "positifs ou négatifs sont les bienvenus."
 
-#: performance-tester.php:529
+#: performance-tester.php:544
 msgid "Contact us"
 msgstr "Contactez nous"
 
-#: performance-tester.php:531
+#: performance-tester.php:546
 msgid "Help us to improve it, find source on "
 msgstr "Aidez nous à améliorer ce plugin, vous pouvez trouver les sources sur "
 
-#: performance-tester.php:533
+#: performance-tester.php:548
 msgid "You can give it a good rating on WordPress.org."
 msgstr "Vous pouvez lui donner une bonne note sur WordPress.org."
 

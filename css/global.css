@@ -91,7 +91,10 @@ hr.dbwp_clear{
 }
 
 #dbwp_result div.dbwp_gaugeContainer.dbwp_first{
-	margin-left: 33px;
+	margin-left: 66px;
+}
+#dbwp_result div.dbwp_gaugeContainer.dbwp_last{
+	margin-right: 0;
 }
 
 #dbwp_result div.dbwp_textContainer{

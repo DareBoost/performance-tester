@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) or	die( 'Script kiddy uh?' );
 Plugin Name: Performance Tester
 Plugin URI: https://www.dareboost.com
 Description: Analyze your web page and get a quality and performance report. 
-Version: 0.1
+Version: 0.1.2
 Author: Anthony Fourneau
 Author URI: https://www.dareboost.com
 License: Apache License v2
@@ -94,6 +94,9 @@ class Performance_Tester{
 					'id'    => 'dbwp_toolbarAdminLink',
 					'title' => __('Analyze my homepage',self::DBWP_TEXT_DOMAIN),
 					'href'	=> admin_url('admin.php?page=Performance_Tester') . '#launch',
+					'meta'	=> array(
+						'class' => 'dbwp_toolbarAdminRealLink'
+					)
 			));
 		}
 	}
@@ -375,20 +378,24 @@ class Performance_Tester{
 		$formatedMessage .= '		<p>';
 		$formatedMessage .= 			__('Access to your full web performance and quality report which gather hundreds of metrics and tips to improve and speed up your website',self::DBWP_TEXT_DOMAIN) ;
 		$formatedMessage .= '		</p>';
-		$formatedMessage .= '		<p class="dbwp_center">';
-		$formatedMessage .= '			<br/><a target="_blank" id="dbwp_reportButton" class="button button-primary" href="' . $json_response['report']['publicReportUrl'] . '">' . __('Access to the full report',self::DBWP_TEXT_DOMAIN) . '</a>';
-		$formatedMessage .= '		</p>';
 		$formatedMessage .= '	</div>';
 
 		$formatedMessage .= $this->dbwp_get_gauge($json_response);
 
+		$formatedMessage .= '	<div class="dbwp_containerPart">';
+		$formatedMessage .= '		<p class="dbwp_center">';
+		$formatedMessage .= '			<a target="_blank" id="dbwp_reportButton" class="button button-primary" href="' . $json_response['report']['publicReportUrl'] . '">' . __('Access to the full report',self::DBWP_TEXT_DOMAIN) . '</a>';
+		$formatedMessage .= '		</p>';
+		$formatedMessage .= '	</div>';
+		
+		// priority tips
+		$formatedMessage .= $this->dbwp_get_priority_tips($json_response['report']['tips']);
+		
 		// performance timings
 		if($performanceTimingsMessage != ""){
 			$formatedMessage .= $performanceTimingsMessage;
 		}
 
-		// priority tips
-		$formatedMessage .= $this->dbwp_get_priority_tips($json_response['report']['tips']);
 		$formatedMessage .= '</div>';
 
 		$result['message'] =  $formatedMessage ;
@@ -414,7 +421,7 @@ class Performance_Tester{
 	
 		// gauge
 		$gaugeFormated = '<div class="dbwp_containerPart">';
-		$gaugeFormated .= '	<h2>' . __('Overall metric', self::DBWP_TEXT_DOMAIN) . '</h2>';
+		$gaugeFormated .= '	<h2>' . __('Overall Metrics', self::DBWP_TEXT_DOMAIN) . '</h2>';
 		$gaugeFormated .= '	<div class="dbwp_gaugeContainer dbwp_first">';
 		$gaugeFormated .= '		<img src="'. $this->dbwp_get_image_gauge_link('mark', $json_response['report']['summary']['score']) . '" alt="'. $json_response['report']['summary']['score'].'"/>';
 		$gaugeFormated .= '		<span class="dbwp_gaugeText">'.$json_response['report']['summary']['score'].' / 100</span>';
@@ -423,7 +430,7 @@ class Performance_Tester{
 		$gaugeFormated .= '		<img src="'. $this->dbwp_get_image_gauge_link('loadtime', $json_response['report']['summary']['loadTime']) . '" alt="'. $json_response['report']['summary']['loadTime'].'"/>';
 		$gaugeFormated .= '		<span class="dbwp_gaugeText">'.$this->dbwp_floor_with_two_decimals($json_response['report']['summary']['loadTime'] / 1000.0). __(' sec', self::DBWP_TEXT_DOMAIN) . '</span>';
 		$gaugeFormated .= '	</div>';
-		$gaugeFormated .= '	<div class="dbwp_gaugeContainer">';
+		$gaugeFormated .= '	<div class="dbwp_gaugeContainer dbwp_last">';
 		$gaugeFormated .= '		<img src="'. $this->dbwp_get_image_gauge_link('weight', $json_response['report']['summary']['weight']) . '" alt="'. $json_response['report']['summary']['weight'].'"/>';
 		$gaugeFormated .= '		<span class="dbwp_gaugeText">'.$computeWeight.' </span>';
 		$gaugeFormated .= '	</div>';
@@ -476,9 +483,9 @@ class Performance_Tester{
 			$domInteractifTimestamp = $json_response['report']['performanceTimings']['domInteractive'];
 	
 			// compute size of the element and the value to display
-			$ttfbSize = ((( $firstByteTimestamp - $navigationStartTimestamp) * 100 ) / $loadTime).'%';
+			$ttfbSize = ((( $firstByteTimestamp - $navigationStartTimestamp) * 100 ) / $loadTime);
 			$ttfb = ($firstByteTimestamp - $navigationStartTimestamp);
-			$domInteractifSize = ((($domInteractifTimestamp - $firstByteTimestamp) * 100 ) / $loadTime).'%';
+			$domInteractifSize = ((($domInteractifTimestamp - $firstByteTimestamp) * 100 ) / $loadTime);
 			$domInteractif = ($domInteractifTimestamp - $navigationStartTimestamp);
 			$fullyLoadedSize = (100-$ttfbSize)-$domInteractifSize;
 			$fullyLoaded = $loadTime;

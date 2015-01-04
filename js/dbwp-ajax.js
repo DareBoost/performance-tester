@@ -51,6 +51,14 @@ jQuery(document).ready(function($) {
 		launchAnalysis();
 		return false;
 	});
+
+	// if we already are on the admin page and the user click on the button from the admin page
+	$('.dbwp_toolbarAdminRealLink').click(function(){
+		launchAnalysis();
+		// click on the button add "#launch" hash, so we want to remove it
+		window.location.hash = "";
+		return false;
+	});
 	
 	// When we got the hash "launch" on the url, it's mean we have to launch the analysis
 	if ( window.location.hash === "#launch" ) {
