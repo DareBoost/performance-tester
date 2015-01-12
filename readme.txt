@@ -39,6 +39,8 @@ For the moment this plugin allows you to analyze your home page only. However we
 1. Example of a report you will get from your backoffice
 
 == Changelog ==
+= 0.1.3 =
+ - Fix issue with the lang of the analysis
 = 0.1.2 =
  - Graphic restructuring
  - Fix issue that prevented to launch analysis from admin bar when we already were on the plugin page

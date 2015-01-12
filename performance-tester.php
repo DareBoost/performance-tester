@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) or	die( 'Script kiddy uh?' );
 Plugin Name: Performance Tester
 Plugin URI: https://www.dareboost.com
 Description: Analyze your web page and get a quality and performance report. 
-Version: 0.1.2
+Version: 0.1.3
 Author: Anthony Fourneau
 Author URI: https://www.dareboost.com
 License: Apache License v2
